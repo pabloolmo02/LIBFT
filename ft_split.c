@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polmo-lo <polmo-lo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pabloolmo <pabloolmo@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 10:48:40 by polmo-lo          #+#    #+#             */
-/*   Updated: 2024/05/29 13:26:50 by polmo-lo         ###   ########.fr       */
+/*   Updated: 2024/06/07 15:27:36 by pabloolmo        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static	int	ft_countwords(const char *str, char c);
 static	char	**ft_free(char **str, int i);
@@ -68,7 +69,7 @@ char	**ft_split(const char *str, char c)
 	while (i < words)
 	{
 		while (str[start] == c)
-			i++;
+			start++;
 		array[i] = ft_substr(str, start, ft_wordlen(str + start, c));
 		if (!array[i])
 			return (ft_free(array, i));

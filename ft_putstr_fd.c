@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polmo-lo <polmo-lo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pabloolmo <pabloolmo@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 21:14:18 by polmo-lo          #+#    #+#             */
-/*   Updated: 2024/06/06 21:28:16 by polmo-lo         ###   ########.fr       */
+/*   Updated: 2024/06/07 15:22:14 by pabloolmo        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putstr_fd(char *s, int fd)
 
 	i = 0;
 	while (s[i] != '\0')
-	{	
+	{
 		write(fd, &s[i], 1);
 		i++;
 	}
